@@ -27,7 +27,7 @@
         }
         a {
             border-radius: 4px;
-            border: 1px solid #DDD;
+            border: 1px solid #ccc;
             padding: 1em 1em 1em 2em;
             display: block;
             vertical-align: top;
@@ -48,7 +48,7 @@
             }
             &:hover,
             &:focus {
-                border: 2px solid $lightColor;
+                border: 1px solid $lightColor;
             }
             &:before {
                 content: '';
