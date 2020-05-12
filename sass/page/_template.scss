@@ -73,6 +73,9 @@ body {
     @include screen('mobile') {
         padding-top: 250px;
         background-size: 1300px;
+         &:before{
+            display: none;
+         }
     }
     @media(max-width: 480px) {
         padding-top: 200px;
