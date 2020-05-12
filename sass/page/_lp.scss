@@ -1,0 +1,304 @@
+.lp {
+    table {
+        td {
+            a {
+                @include aSetting_nocolor;
+                color: darken($primaryColor, 5);
+            }
+            &.date {
+                text-align: center;
+                color: #666;
+                @include screen('mobile') {
+                    text-align: left;
+                }
+            }
+            &.num {
+                text-align: center;
+                color: #666;
+                @include screen('mobile') {
+                    text-align: left;
+                }
+            }
+        }
+    }
+    .list {
+        &>ul, ol {
+            list-style-type: none;
+            padding: 0;
+            border-top: 2px solid $primaryColor;
+            &>li {
+                padding: 1em 0;
+                border-bottom: 1px solid #DDD;
+                position: relative; // outline: 1px solid blue;
+                .tag {
+                    margin-left: 2em;
+                }
+                &>a {
+                    display: block;
+                    padding-left: 2em;
+                    position: relative;
+                    line-height: 1.45em;
+                    color: $color-word;
+                    &:hover {
+                        color: $aHover;
+                    }
+                    .num {
+                        width: 1.5em;
+                        text-align: right;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        &:after {
+                            content: ".";
+                            display: inline-block;
+                        }
+                    }
+                }
+                span.dept {
+                    display: inline-block;
+                    font-size: .938em;
+                    @include screen("mobile") {
+                        display: block;
+                    }
+                }
+                time {
+                    display: block;
+                    color: #AAA;
+                    font-size: .938em;
+                }
+            }
+        }
+    }
+}
+.album {
+    margin: 1em auto 30px;
+    ul {
+        @include li-reset;
+        li {
+            @include make_col(3, 1);
+            overflow: visible;
+            .thumbnail {
+                width: 100%;
+                max-width: 90%;
+                margin: 0 auto 1em;
+            }
+            a {
+                border: 1px solid #DDD;
+                transition: .5s;
+                @include border-radius(4px);
+                &:hover {
+                    border: 1px solid $primaryColor;
+                    box-shadow: 0px 0px 5px #999;
+                }
+            }
+            .img-container {
+                @include aspect-ratio(4, 3);
+            }
+            .caption {
+                text-align: left;
+                width: 90%;
+                margin: 0 auto;
+                h3 {
+                    height: 3em;
+                    overflow: hidden;
+                    line-height: 1.5em;
+                    display: block;
+                    margin: 5px 0;
+                    font-size: 1.25em;
+                }
+                time {
+                    color: #666;
+                    font-size: .938em;
+                    display: block;
+                    margin: 15px 0 10px;
+                    background-image: url('../images/icon_time.png');
+                    background-position: 0 center;
+                    background-repeat: no-repeat;
+                    padding: 0 0 0 20px;
+                }
+            }
+        }
+    }
+}
+/*-----------------------------------------------topfunction*/
+.topfunction {
+    text-align: right;
+    margin-top: -60px;
+    /* padding-bottom: 20px; */
+    margin-bottom: 40px;
+    @include screen('mobile') {
+        margin-top: 0;
+        margin-bottom: 10px;
+    }
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        li {
+            display: inline-block;
+            margin: 0 0 0 15px;
+            a {
+                display: block;
+                padding: 0px 0 0 25px;
+            }
+            a.rss {
+                background-image: url(../images/icon_rss.png);
+                background-repeat: no-repeat;
+                background-position: 0 center;
+            }
+            a.condition {
+                background-image: url(../images/icon_condition.png);
+                background-repeat: no-repeat;
+                background-position: 0 center;
+                transition: 1s;
+            }
+        }
+    }
+}
+.condition_block {
+    margin: 0;
+    padding: 0;
+}
+// list01
+.list01 {
+    clear: both;
+    margin: 0px 0 30px;
+    float: none;
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        li {
+            margin: 0 0 10px 0;
+            padding: 6px 0 12px 25px;
+            border-bottom: 1px dotted #666;
+            position: relative;
+            &:before {
+                content: '';
+                width: 12px;
+                height: 12px;
+                position: absolute;
+                border-radius: 50%;
+                background-color: #666;
+                left: 0;
+                top: 12px;
+            }
+            &:after {
+                content: '';
+                width: 3px;
+                height: 3px;
+                border: 1px solid #fff;
+                border-bottom-color: transparent;
+                border-left-color: transparent;
+                position: absolute;
+                left: 2px;
+                top: 15px;
+                transform: rotate(45deg);
+            }
+            a {
+                color: #333;
+                &:hover {
+                    color: $aHover;
+                }
+            }
+            span {
+                margin: 0 5px;
+                color: #999;
+                &.number {
+                    width: 20px;
+                    margin: 0 15px 0 -35px;
+                    display: inline-block;
+                    color: #000;
+                    text-align: right;
+                    display: none;
+                }
+            }
+        }
+    }
+}
+/*-----------------------------listTb--*/
+.listTb {
+    clear: both;
+    margin: 0 0 30px;
+    padding: 0;
+    table {
+        width: 100%;
+        border: 1px solid #fff;
+        margin-bottom: 20px;
+        th {
+            padding: 10px;
+            color: #333;
+            background-color: #E6E6E6;
+            border: 1px solid #CCC;
+            border-bottom-width: 2px;
+            border-bottom-color: #ddd;
+            text-align: center
+        }
+        td {
+            padding: 10px;
+            text-align: left;
+            border: 1px solid #CCC;
+            a {
+                color: darken($primaryColor, 20);
+            }
+            &.date {
+                white-space: nowrap;
+            }
+            span {
+                margin: 0 5px;
+                color: #999;
+            }
+        }
+        .aCenter {
+            text-align: center;
+        }
+        .aRight {
+            text-align: right;
+        }
+        .map {
+            margin: 0 10px 0 0;
+            img {
+                vertical-align: middle;
+            }
+        }
+    }
+}
+@media (max-width: 767px) {
+    .listTb table {
+        width: 100%;
+        tr {
+            margin: 0 0 20px 0;
+            display: block;
+            th {
+                display: none;
+            }
+            td {
+                display: block;
+                margin: -1px 0 0 0;
+                // &:nth-child(1) {
+                //     width: 100%;
+                // }
+                // &:nth-child(2) {
+                //     width: 100%;
+                // }
+                &:before {
+                    content: attr(data-title) "：";
+                    display: inline-block;
+                    color: #666;
+                }
+                &:empty {
+                    display: none;
+                }
+                &.date {
+                    white-space: normal;
+                }
+            }
+        }
+        .aCenter {
+            text-align: left;
+        }
+        .aRight {
+            text-align: left;
+        }
+    }
+}

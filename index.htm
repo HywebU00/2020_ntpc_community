@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="zh-Hant" class="no-js">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>單位名稱切版檔案</title>
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <!-- hyUI -->
+    <link rel="stylesheet" href="css/hyui.css">
+    <style>
+    .demo_wrap {
+        max-width: 1000px;
+        margin: 0em auto 1em;
+        padding: 15px 15px 3em;
+        clear: both;
+        background: #FFF
+    }
+    .demo_wrap h1 {
+        display: block;
+        margin: 0px;
+        width: 210px;
+        height: 176px;
+        float: left;
+        margin-right: 1em;
+        background-color: #333;
+        position: relative;
+    }
+    .demo_wrap h1 img {
+        position: absolute;
+        width: 140px;
+        height: 116px;
+        margin: auto;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        box-sizing: border-box;
+    }
+    @media screen and (max-width:545px) {
+        .demo_wrap h1 {
+            max-width: 100%;
+            float: none;
+            text-align: center
+        }
+    }
+    .num {
+        width: 12%
+    }
+    body {
+        counter-reset: num
+    }
+    table {
+        margin-bottom: 1em
+    }
+    table caption {
+        text-align: left;
+        font-weight: bold;
+        font-size: 1.25em;
+        padding: .5em 0;
+        color: #ff5050
+    }
+    tbody tr td:first-child:before {
+        counter-increment: num;
+        display: block;
+        text-align: center;
+        content: counters(num, ".") " "
+    }
+    tbody tr td:nth-child(2) {
+        width: 35%
+    }
+    .btn_grp {
+        text-align: right;
+    }
+    @media screen and (max-width:545px) {
+        .btn_grp {
+            text-align: center;
+        }
+    }
+    </style>
+</head>
+
+<body>
+    <div class="demo_wrap">
+        <h1><img src="images/logo.png" alt=""></h1>
+        <div class="btn_grp">
+            <a href="#" class="btn">切版檔案請按此下載</a>
+        </div>
+        <hr>
+        <div class="table_wrapper">
+            <!-- hyUI 標準頁面 -->
+            <table>
+                <thead>
+                    <tr>
+                        <th class="num">編號</th>
+                        <th>頁面名稱</th>
+                        <th>檔案名稱</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td></td>
+                        <td>首頁</td>
+                        <!-- 連結放到a裡面就好 -->
+                        <td><a href="mp.htm"></a></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td> np_文字節點</td>
+                        <td><a href="np.htm"></a></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>lp_文字列表</td>
+                        <td><a href="lp01_list.htm"></a></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td> lp_表格列表</td>
+                        <td><a href="lp02_table.htm"></a></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td> lp_圖片列表</td>
+                        <td><a href="lp03_photo.htm"></a></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>cp_基本內容</td>
+                        <td><a href="cp01.htm"></a></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>cp_表格內容</td>
+                        <td><a href="cp02_table.htm"></a></td>
+                    </tr>
+                    
+                    <tr>
+                        <td></td>
+                        <td> qp_查詢頁</td>
+                        <td><a href="qp.htm"></a></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>網站導覽</td>
+                        <td><a href="sitemap.htm"></a></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>404 錯誤頁面</td>
+                        <td><a href="404.htm"></a></td>
+                    </tr>
+                </tbody>
+            </table>
+            
+        </div>
+    </div>
+    <a href="javascript:;" class="scrollToTop">回頁首</a>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="vendor/jquery.easing.min.js"></script>
+    <script src="js/hyui.js"></script>
+    <script src="js/customize.js"></script>
+    <script>
+    $(function() {
+        $('tbody').find('a').each(function(index, el) {
+            var Link = $(this).attr('href');
+            $(this).text(Link);
+        });
+    })
+    </script>
+</body>
+
+</html>

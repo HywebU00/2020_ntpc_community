@@ -1,0 +1,18 @@
+.qp{
+	margin: 1em auto;
+	@include box-sizing;
+	padding:1em 0;
+}
+blockquote {
+    clear: both;
+    background-color: lighten($lightColor, 36);
+    padding: 15px 20px;
+    margin: 0 0 20px;
+    line-height: 1.8em;
+    @include border-radius(5px);
+}
+.necessary{
+	font-weight: 800;
+	font-size: 1.5em;
+	vertical-align: bottom;
+}
