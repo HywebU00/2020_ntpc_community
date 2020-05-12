@@ -13,6 +13,8 @@
     <!-- slick css-->
     <link rel="stylesheet" type="text/css" href="vendor/slick/slick.css" />
     <link rel="stylesheet" type="text/css" href="vendor/slick/slick-theme.css" />
+
+    <link rel="stylesheet" href="css/animate.css">
     <!-- hyUI css -->
     <link rel="stylesheet" href="css/hyui.css">
     <!-- favicon -->
@@ -151,7 +153,7 @@
                 <div class="container">
                     <div class="col">
                         <!-- 最新消息 start -->
-                        <div class="news">
+                        <div class="news wow slideInLeft" data-wow-duration="1s" data-wow-delay="0s">
                             <h2>最新消息</h2>
                             <div class="news_list">
                                 <ul>
@@ -168,7 +170,7 @@
                     </div>
                     <div class="col">
                         <!-- linkblock start -->
-                        <div class="linkblock">
+                        <div class="linkblock wow slideInRight" data-wow-duration="1s" data-wow-delay="0s">
                             <ul>
                                 <li><a href="#"><img src="images/linkblock_icon01.png">嚴重特殊傳染性肺炎</a></li>
                                 <li><a href="#"><img src="images/linkblock_icon02.png">新北市里民服務網</a></li>
@@ -179,7 +181,7 @@
                     </div>
                 </div>
             </section>
-            <section class="demosection col-12 related_resources_block">
+            <section class="demosection col-12 related_resources_block wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s">
                 <div class="container">
                     <div class="col">
                         <!-- 相關資源 start-->
@@ -261,7 +263,7 @@
                 <div class="container">
                     <div class="col">
                         <!--圖片banner輪播 start -->
-                        <div class="photo_block">
+                        <div class="photo_block wow slideInLeft" data-wow-duration="1s" data-wow-delay="0s">
                             <h2>優質治安社區</h2>
                             <div class="photo_slider">
                                 <!-- 1 -->
@@ -287,7 +289,7 @@
                     </div>
                     <div class="col">
                         <!--圖片banner輪播 start -->
-                        <div class="photo_block">
+                        <div class="photo_block wow slideInRight" data-wow-duration="1s" data-wow-delay="0s">
                             <h2>宣導影音</h2>
                             <div class="photo_slider">
                                 <!-- 1 -->
@@ -468,6 +470,11 @@
     <script src="vendor/lazyload/lazyload.js"></script><!-- lazyload -->
     <script src="vendor/picturefill/picturefill.min.js" async></script><!-- picturefill -->
     <script src="vendor/scrolltable/jquery.scroltable.min.js"></script><!-- scrolltable -->
+    <!-- wow js -->
+    <script src="js/wow.min.js"></script>
+              <script>
+              new WOW().init();
+              </script>
     <!-- hyUI -->
     <script src="js/hyui.js"></script>
     <!-- 客製js -->
