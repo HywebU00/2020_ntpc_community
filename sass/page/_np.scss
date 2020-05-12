@@ -1,10 +1,10 @@
 // 自動產生編號：https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters
 .np {
-    ul,ol {
-        overflow:hidden;
-        padding:1em 0;
+    ul, ol {
+        overflow: hidden;
+        padding: 1em 0;
         margin: 0 0 30px;
-        overflow:hidden;
+        overflow: hidden;
     }
     li {
         display: block;
@@ -13,41 +13,64 @@
         float: left;
         @include box-sizing(border-box);
         &:nth-child(even) {
-        	width: 50%;
+            width: 50%;
             margin-right: 0px;
         }
         @include screen('mobile') {
-            float:none;
+            float: none;
             width: 96%;
-            margin:0px auto 10px;
-            &:nth-child(even){
+            margin: 0px auto 10px;
+            &:nth-child(even) {
                 width: 96%;
                 margin-right: auto;
             }
         }
         a {
-            border-radius:4px;
+            border-radius: 4px;
             border: 2px solid #DDD;
             padding: 1em 1em 1em 2em;
             display: block;
             vertical-align: top;
             @include text-overflow;
-            position:relative;
+            position: relative;
             @include aSetting_nocolor;
-            .num{
+            .num {
                 position: absolute;
-                width:1em;
+                width: 1em;
                 top: 1em;
                 left: .5em;
                 text-align: right;
-                &:after{
-                    content:".";
-                    display:inline-block;
+                display: none;
+                &:after {
+                    content: ".";
+                    display: inline-block;
                 }
             }
             &:hover,
             &:focus {
                 border: 2px solid $lightColor;
+            }
+            &:before {
+                content: '';
+                width: 12px;
+                height: 12px;
+                position: absolute;
+                border-radius: 50%;
+                background-color: $lightColor;
+                left: 12px;
+                top: 21px;
+            }
+            &:after {
+                content: '';
+                width: 3px;
+                height: 3px;
+                border: 1px solid #fff;
+                border-bottom-color: transparent;
+                border-left-color: transparent;
+                position: absolute;
+                left: 14px;
+                top: 25px;
+                transform: rotate(45deg);
             }
         }
     }
