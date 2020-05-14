@@ -264,7 +264,7 @@ h1.title, h2.title {
         padding: 0;
         list-style-type: none;
         span {
-            color: $primaryColor;
+            color: #333;
             margin: 0 5px
         }
     }
@@ -279,7 +279,7 @@ h1.title, h2.title {
         width: 400px;
         letter-spacing: 0;
         border-radius: 5px;
-        background-color: #fff;
+        background-color: #eee;
         a {
             display: block;
             &:focus {
@@ -291,7 +291,8 @@ h1.title, h2.title {
             line-height: 140%;
             width: auto;
             max-width: 400px;
-            color: $primaryColor;
+             padding:8px 15px;
+            color: #333;
         }
     }
     &.image_left {
@@ -300,6 +301,7 @@ h1.title, h2.title {
         padding: 0;
         width: 400px;
         letter-spacing: 0;
+        background-color: #eee;
         a {
             display: block;
             &:focus {
@@ -310,8 +312,9 @@ h1.title, h2.title {
             margin: 10px 0;
             line-height: 140%;
             width: auto;
+            padding:8px 15px;
             max-width: 400px;
-            color: $primaryColor;
+            color: #333;
         }
     }
     &.image_right img,
