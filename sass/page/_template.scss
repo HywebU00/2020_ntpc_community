@@ -222,6 +222,9 @@ body {
                     &.print {
                         background-color: #5c64b5
                     }
+                    &:focus{
+                        box-shadow: 0 0px 0px 2px #f07340!important;
+                    }
                 }
                 img {
                     width: 30px;
