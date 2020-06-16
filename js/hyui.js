@@ -470,7 +470,7 @@ $(function() {
     ie = ieReg.test(userAgent);
     if (ie) {
         $(".img-container").each(function() {
-            var imgUrl = $(this).find('img').attr('data-src');
+            var imgUrl = $(this).find('img').attr('src');
             var $container = $(this);
             $container.has('.none').addClass('ie-object-none');
             $container.has('.none').css('backgroundImage', 'url(' + imgUrl + ')');
