@@ -294,7 +294,7 @@
                     span {
                         margin-right: 20px;
                         &.area {
-                            color: darken($secondaryColor, 20);
+                            color: $secondaryColor;
                             font-weight: 700;
                         }
                         &.date {
@@ -377,7 +377,7 @@
             }
             &:nth-child(3) {
                 a {
-                    background-color: $primaryColor;
+                    background-color:$primaryColor;
                     &:before {
                         border-color: darken($primaryColor, 15);
                     }
@@ -482,10 +482,10 @@
                 }
                 a {
                     display: block;
-                    color: $primaryColor;
+                    color:darken($primaryColor, 5);
                     padding: 0 10px;
                     &:hover {
-                        color: $lightColor;
+                        color: darken($lightColor, 3);
                     }
                 }
                 &:last-child {
@@ -537,7 +537,7 @@
                     background-color: #333;
                 }
                 a {
-                    color: $lightColor;
+                    color: darken($lightColor, 3);
                     &:hover {
                         text-decoration: underline;
                     }
