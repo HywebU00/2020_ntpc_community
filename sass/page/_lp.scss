@@ -98,13 +98,14 @@
                 text-align: left;
                 width: 90%;
                 margin: 0 auto;
-                h3 {
+               .title {
                     height: 3em;
                     overflow: hidden;
                     line-height: 1.5em;
                     display: block;
                     margin: 5px 0;
                     font-size: 1.25em;
+                    font-weight: bolder;
                 }
                 time {
                     color: #666;
@@ -203,7 +204,7 @@
             }
             span {
                 margin: 0 5px;
-                color: #999;
+                color: #757575;
                 &.number {
                     width: 20px;
                     margin: 0 15px 0 -35px;
