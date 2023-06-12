@@ -207,7 +207,10 @@
                 padding: .5em;
                 text-decoration: none;
                 @include aSetting_nocolor;
-                color: #767676;
+                color: #616161;
+                &:hover{
+                    color:#AB3E02;
+                }
             }
         }
         .language {
